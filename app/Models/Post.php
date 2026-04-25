@@ -2,6 +2,7 @@
 
 namespace App\Models;
 
+use App\Traits\LikeTrait;
 use Illuminate\Database\Eloquent\Attributes\Scope;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
@@ -11,7 +12,7 @@ class Post extends Model
 {
     protected $guarded = [];
 
-    use HasFactory;
+    use HasFactory, LikeTrait;
 
     public function author()
     {
